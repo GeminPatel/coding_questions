@@ -1,19 +1,8 @@
-class NFibonacci
-  def self.print(input)
-    p fib(input)
-  end
+def fibonacci(n)
+  return n if n <= 1
 
-  private
-
-  def self.fib(input)
-    if input == 0 || input == 1
-      input
-    else
-      fib(input - 1) + fib(input - 2)
-    end
-  end
+  fibonacci(n - 1) + fibonacci(n - 2)
 end
 
-input = gets.strip.chomp.to_i
-
-NFibonacci.print(input)
+n = gets.to_i
+print(fibonacci(n))
